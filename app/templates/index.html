@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-$END$
+    <header>
+        <nav>
+            <h1>Магазин</h1>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/auth/login">Вход</a></li>
+                <li><a href="/auth/register">Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products">
+            <h2>Наши товары</h2>
+
+            <div id="product-list" class="product-container">
+            {% for i in all_product %}
+                <h1>{{i.name}}</h1>
+
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Онлайн Магазин</p>
+    </footer>
+
+    <script src="/static/js/app.js"></script>
 </body>
 </html>
